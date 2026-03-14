@@ -4,18 +4,18 @@ using namespace std;
 int main()
 {
     int x;
-    cout<<"enter lenght of arr ";
+    // cout<<"enter lenght of arr ";
     cin>>x;
 
     int numbers[x];
-    cout<<"enter arr val ";
+    // cout<<"enter arr val ";
     for(int i=0;i<x;i++)
     {
         cin>>numbers[i];
     }
 
     int target;
-    cout<<"enter target ";
+    // cout<<"enter target ";
     cin>>target;
 
     int left = 0;
