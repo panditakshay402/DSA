@@ -50,12 +50,12 @@ If you press:
 ```
 Ctrl + Shift + B
 ```
-### Run using VS Code Task
+### Multiple comment using VS Code
 
 If you press:
 
 ```
-Ctrl + Shift + B
+Shift + Alt + A
 ```
 VS Code will automatically:
 
