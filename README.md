@@ -50,7 +50,13 @@ If you press:
 ```
 Ctrl + Shift + B
 ```
+### Run using VS Code Task
 
+If you press:
+
+```
+Ctrl + Shift + B
+```
 VS Code will automatically:
 
 1. Compile the current C++ file
