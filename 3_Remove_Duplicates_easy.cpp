@@ -16,3 +16,25 @@ The number of nodes in the list is in the range [0, 300].
 -100 <= Node.val <= 100
 The list is guaranteed to be sorted in ascending order. 
 */
+
+#include<iostream>
+#include<set>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    set<int> s;
+    for(int i=0;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        s.insert(x);
+    }
+    for(int x:s)
+    {
+        cout<<x<<" ";
+    }
+
+}
