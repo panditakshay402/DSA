@@ -1,19 +1,30 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "compile and run",
-            "type": "shell",
-            "command": "cmd",
-            "args": [
-                "/c",
-                "g++ -std=c++17 ${file} -o program && program.exe < input.txt > output.txt"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run cpp",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "g++ -std=c++17 ${file} -o ${fileDirname}/${fileBasenameNoExtension}.exe && ${fileDirname}/${fileBasenameNoExtension}.exe < input.txt > output.txt"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "build cpp",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "problemMatcher": ["$gcc"]
+    }
+  ]
 }
