@@ -1,6 +1,6 @@
-/* 
+/*
 977. Squares of a Sorted Array
-Given an integer array nums sorted in non-decreasing order, 
+Given an integer array nums sorted in non-decreasing order,
 return an array of the squares of each number sorted in non-decreasing order.
 
 Example 1:
@@ -19,32 +19,34 @@ Constraints:
 nums is sorted in non-decreasing order.
 
 Follow up: Squaring each element and sorting the new array is very trivial,
-could you find an O(n) solution using a different approach? 
+could you find an O(n) solution using a different approach?
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> sortedSquares(vector<int>& nums) {
+vector<int> sortedSquares(vector<int> &nums)
+{
     vector<int> ans;
 
-    // Step 1: square each element
-    for (int i = 0; i < nums.size(); i++) {
+    for (int i = 0; i < nums.size(); i++)
+    {
         ans.push_back(nums[i] * nums[i]);
     }
 
-    // Step 2: sort the result
     sort(ans.begin(), ans.end());
 
     return ans;
 }
 
-int main() {
-    vector<int> nums = {-4,-1,0,3,10};
+int main()
+{
+    vector<int> nums = {-4, -1, 0, 3, 10};
 
     vector<int> result = sortedSquares(nums);
 
-    for (int x : result) {
+    for (int x : result)
+    {
         cout << x << " ";
     }
 }
