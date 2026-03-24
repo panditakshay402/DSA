@@ -1,7 +1,7 @@
-/* 
+/*
 15. 3Sum
-Given an integer array nums, return all the triplets [nums[i], nums[j], 
-nums[k]] such that i != j, i != k, and j != k, 
+Given an integer array nums, return all the triplets [nums[i], nums[j],
+nums[k]] such that i != j, i != k, and j != k,
 and nums[i] + nums[j] + nums[k] == 0.
 
 Notice that the solution set must not contain duplicate triplets.
@@ -9,7 +9,7 @@ Notice that the solution set must not contain duplicate triplets.
 Example 1:
 Input: nums = [-1,0,1,2,-1,-4]
 Output: [[-1,-1,2],[-1,0,1]]
-Explanation: 
+Explanation:
 nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
 nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
 nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
@@ -25,7 +25,7 @@ Example 3:
 Input: nums = [0,0,0]
 Output: [[0,0,0]]
 Explanation: The only possible triplet sums up to 0.
- 
+
 Constraints:
 3 <= nums.length <= 3000
 -105 <= nums[i] <= 105
@@ -34,37 +34,43 @@ Constraints:
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<vector<int>> threeSum(vector<int>& nums) {
+vector<vector<int>> threeSum(vector<int> &nums)
+{
     vector<vector<int>> ans;
-    
-    // Step 1: sort
+
     sort(nums.begin(), nums.end());
 
-    for (int i = 0; i < nums.size(); i++) {
-        
-        // Skip duplicate i
-        if (i > 0 && nums[i] == nums[i - 1]) continue;
+    for (int i = 0; i < nums.size(); i++)
+    {
+
+        if (i > 0 && nums[i] == nums[i - 1])
+            continue;
 
         int left = i + 1;
         int right = nums.size() - 1;
 
-        while (left < right) {
+        while (left < right)
+        {
             int sum = nums[i] + nums[left] + nums[right];
 
-            if (sum == 0) {
+            if (sum == 0)
+            {
                 ans.push_back({nums[i], nums[left], nums[right]});
 
-                // Skip duplicates
-                while (left < right && nums[left] == nums[left + 1]) left++;
-                while (left < right && nums[right] == nums[right - 1]) right--;
+                while (left < right && nums[left] == nums[left + 1])
+                    left++;
+                while (left < right && nums[right] == nums[right - 1])
+                    right--;
 
                 left++;
                 right--;
             }
-            else if (sum < 0) {
+            else if (sum < 0)
+            {
                 left++;
             }
-            else {
+            else
+            {
                 right--;
             }
         }
@@ -73,13 +79,16 @@ vector<vector<int>> threeSum(vector<int>& nums) {
     return ans;
 }
 
-int main() {
-    vector<int> nums = {-1,0,1,2,-1,-4};
+int main()
+{
+    vector<int> nums = {-1, 0, 1, 2, -1, -4};
 
     vector<vector<int>> result = threeSum(nums);
 
-    for (auto v : result) {
-        for (int x : v) cout << x << " ";
+    for (auto v : result)
+    {
+        for (int x : v)
+            cout << x << " ";
         cout << endl;
     }
 }
