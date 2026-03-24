@@ -6,7 +6,7 @@
 using namespace std;
 vector<int> reverseNum(const vector<int> &v)
 {
-     vector<int> result;
+    vector<int> result;
     for (int i = 0; i < v.size(); i++)
     {
         int ognum = v[i];
@@ -17,7 +17,6 @@ vector<int> reverseNum(const vector<int> &v)
             rev = (rev * 10) + digit;
             ognum = ognum / 10;
         }
-        // cout<<rev<<endl;
         result.push_back(rev);
     }
     return result;
@@ -34,9 +33,9 @@ int main()
         cin >> x;
         v.push_back(x);
     }
-   vector<int> ans=reverseNum(v);
+    vector<int> ans = reverseNum(v);
 
-    for(int i = 0; i < ans.size(); i++)
+    for (int i = 0; i < ans.size(); i++)
     {
         cout << ans[i] << "\n";
     }
