@@ -62,7 +62,7 @@ VS Code will automatically:
 1. Compile the current C++ file
 2. Run the program
 3. Take input from `input.txt` for cpp file.
-4. Save output to `output.txt`
+4. Save output to `output.txt` of cpp file.
 
 ---
 
