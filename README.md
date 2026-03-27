@@ -50,7 +50,7 @@ If you press:
 ```
 Ctrl + Shift + B
 ```
-### Multiple comment using VS Code
+### Multiple comment using VS Code.
 
 If you press:
 
