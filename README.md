@@ -113,6 +113,6 @@ int main() {
 
 ## Author
 
-**Akshay Pandit**
+**Akshay Pandit.**
 
 Practicing Data Structures and Algorithms to strengthen problem-solving skills and prepare for technical interviews.
