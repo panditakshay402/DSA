@@ -1,4 +1,4 @@
-# Data Structures and Algorithms (DSA)
+# Data Structures and Algorithms (DSA).
 
 This repository contains my solutions to **Data Structures and Algorithms (DSA)** problems written in **C++**.  
 I am solving problems regularly to improve my **problem-solving skills**, **algorithmic thinking**, and **coding efficiency**.
