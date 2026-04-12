@@ -1,45 +1,54 @@
-/* input 
-5
-3 8 1 11 7 
-
-4
--10 -2 -1 -5
-*/
-
-
+// 6
+// 12 35 1 10 34 1
 
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 using namespace std;
-int maxElements(vector<int> v)
-{
-   int max=v[0];
-   for(int i=0;i<v.size();i++)
-   {
-      if(v[i]>max)
-      {
-         max=v[i];
-      }
 
-   }
-   return max;
+void secondThirdLargest(vector<int> v)
+{
+    sort(v.begin(), v.end());
+
+    int n = v.size();
+    int largest = v[n-1];
+    int second = -1, third = -1;
+
+    // find second largest
+    for(int i = n-2; i >= 0; i--)
+    {
+        if(v[i] != largest)
+        {
+            second = v[i];
+            break;
+        }
+    }
+
+    // find third largest
+    for(int i = n-1; i >= 0; i--)
+    {
+        if(v[i] != largest && v[i] != second)
+        {
+            third = v[i];
+            break;
+        }
+    }
+
+    cout << "Second: " << second << endl;
+    cout << "Third: " << third << endl;
 }
 
 int main()
 {
-   int n;
-   cin>>n;
-   vector<int> v(n);
+    vector<int> v;
+    int n, x;
+    cin >> n;
 
-   for(int i=0;i<n;i++)
-   {
-      cin>>v[i];
-   }
+    for(int i = 0; i < n; i++)
+    {
+        cin >> x;
+        v.push_back(x);
+    }
 
-
-int m=maxElements(v);
-cout<<m;
-return 0;
-
+    secondThirdLargest(v);
 }
