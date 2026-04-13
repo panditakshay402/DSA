@@ -14,7 +14,6 @@ void secondThirdLargest(vector<int> v)
     int largest = v[n-1];
     int second = -1, third = -1;
 
-    // find second largest
     for(int i = n-2; i >= 0; i--)
     {
         if(v[i] != largest)
@@ -24,7 +23,6 @@ void secondThirdLargest(vector<int> v)
         }
     }
 
-    // find third largest
     for(int i = n-1; i >= 0; i--)
     {
         if(v[i] != largest && v[i] != second)
