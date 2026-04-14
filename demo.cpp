@@ -32,8 +32,8 @@ void secondThirdLargest(vector<int> v)
         }
     }
 
-    cout << "Second: " << second << endl;
-    cout << "Third: " << third << endl;
+    cout << second << endl;
+    cout << third << endl;
 }
 
 int main()
