@@ -33,10 +33,10 @@ int main()
     cin >> s2;
     if (anagram(s1, s2))
     {
-        cout << "ana";
+        cout << "Anagram";
     }
     else
     {
-        cout << "not ana";
+        cout << "not Anagram";
     }
 }
