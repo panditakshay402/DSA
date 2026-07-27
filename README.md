@@ -5,6 +5,10 @@ I am solving problems regularly to improve my **problem-solving skills**, **algo
 
 ---
 
+## Syllabus
+<img width="2152" height="9816" alt="_    DSA Patterns@1 5x (1)" src="https://github.com/user-attachments/assets/4c25ce95-1c06-4535-a3a3-32b2598723b5" />
+
+
 ## Repository Structure
 
 ```
@@ -116,3 +120,4 @@ int main() {
 **Akshay Pandit.**
 
 Practicing Data Structures and Algorithms to strengthen problem-solving skills and prepare for technical interviews.
+
