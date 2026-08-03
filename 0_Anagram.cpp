@@ -1,3 +1,46 @@
+/*
+------------------------------------------------------------
+Program: Check if Two Strings are Anagrams
+
+Definition:
+Two strings are called Anagrams if they contain the same
+characters with the same frequency, but the order of
+characters can be different.
+
+Approach:
+1. If the lengths of both strings are different, return false.
+2. Create a frequency array of size 26 (for lowercase letters).
+3. Traverse both strings together:
+   - Increment count for characters of first string.
+   - Decrement count for characters of second string.
+4. If every frequency becomes 0, both strings are anagrams.
+   Otherwise, they are not.
+
+Time Complexity : O(n)
+Space Complexity: O(1)
+
+Example 1:
+Input:
+listen
+silent
+
+Output:
+Anagram
+
+Example 2:
+Input:
+hello
+world
+
+Output:
+not Anagram
+
+Note:
+This program works only for lowercase English letters (a-z).
+------------------------------------------------------------
+*/
+
+
 #include <iostream>
 #include <string>
 
